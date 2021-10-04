@@ -25,7 +25,5 @@ namespace xadrez
                 + Coluna
                 + Linha;
         }
-
-
     }
 }

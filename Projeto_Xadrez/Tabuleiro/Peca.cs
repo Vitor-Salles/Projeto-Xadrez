@@ -10,14 +10,18 @@
         public Peca(Tabuleiro tab, Cor cor)
         {
             Posicao = null;
-            Cor = cor;
             Tab = tab;
+            Cor = cor;
             QtdMovimentos = 0;
         }
 
         public void IncrementarQtdMovimentos()
         {
             QtdMovimentos++;
+        }
+        public void DecrementarQtdMovimentos()
+        {
+            QtdMovimentos--;
         }
 
         public bool ExisteMovimentosPossiveis()
@@ -35,7 +39,7 @@
             }
             return false;
         }
-        public bool PodeMoverPara(Posicao pos)
+        public bool MovimentoPossivel(Posicao pos)
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
